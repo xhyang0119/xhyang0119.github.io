@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "name": "Xiaohang Yang",
+    "chinese_name": "",
+    "initials": "XY",
+    "role": "Ph.D. student in mathematics",
+    "department": "Beijing International Center for Mathematical Research",
+    "university": "Peking University",
+    "location": "Beijing, China",
+    "email": "",
+    "office": "",
+    "photo": "",
+    "github_url": "",
+    "orcid_url": "",
+    "cv_pdf": ""
+  },
+  "site": {
+    "tagline": "Representation theory & automorphic forms",
+    "updated": "September 2026",
+    "copyright_year": "2026"
+  },
+  "home": {
+    "about": [
+      "I am a Ph.D. student in mathematics at Peking University, based at the Beijing International Center for Mathematical Research (BICMR).",
+      "My mathematical interests lie in representation theory and automorphic forms, with a particular interest in the Langlands program."
+    ],
+    "notes_intro": "This space is for expository notes, seminar handouts, and talks related to my mathematical interests."
+  },
+  "research": {
+    "intro": "I am interested in the representation theory of reductive groups and its connections with automorphic forms and the Langlands program.",
+    "topics": [
+      {
+        "title": "Representation theory",
+        "summary": "Reductive groups over local fields and the representation theory of p-adic groups."
+      },
+      {
+        "title": "Automorphic forms",
+        "summary": "The trace formula, endoscopy, and the interplay between local and global questions."
+      },
+      {
+        "title": "The Langlands program",
+        "summary": "Connections between representations, arithmetic, and geometry."
+      }
+    ],
+    "papers": []
+  },
+  "notes": {
+    "intro": "Expository notes, reading seminar materials, and slides will be collected on this page. These materials are intended to accompany study and discussion.",
+    "items": []
+  },
+  "teaching": {
+    "intro": "Course information and teaching materials will be collected here.",
+    "items": []
+  },
+  "cv": {
+    "intro": "A brief academic profile. A downloadable curriculum vitae can be linked here when available.",
+    "sections": []
+  }
+}
