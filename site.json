@@ -16,7 +16,7 @@
   },
   "site": {
     "tagline": "Representation theory & automorphic forms",
-    "updated": "September 2026",
+    "updated": "October 2026",
     "copyright_year": "2026"
   },
   "home": {
@@ -42,7 +42,21 @@
         "summary": "Connections between representations, arithmetic, and geometry."
       }
     ],
-    "papers": []
+    "papers": [
+      {
+        "title": "Enhanced Langlands Parameters of Regular Principal Series",
+        "url": "https://arxiv.org/abs/2610.29471",
+        "year": "2026",
+        "authors": "Haoming Li, Xiaohang Yang, Jizhi Zhang, and Yelei Zhao",
+        "venue": "Preprint (arXiv:2610.29471 [math.RT], v1)",
+        "description": "We describe the enhanced Langlands parameters of irreducible constituents of regular principal series for quasi-split reductive groups over non-archimedean local fields of characteristic zero, prove that their enhancements are trivial, and identify the parameter of the unique irreducible subrepresentation.",
+        "links": [
+          {"label": "arXiv", "url": "https://arxiv.org/abs/2610.29471"},
+          {"label": "PDF", "url": "https://arxiv.org/pdf/2610.29471"},
+          {"label": "BibTeX", "url": "files/li-yang-zhang-zhao-2026.bib"}
+        ]
+      }
+    ]
   },
   "notes": {
     "intro": "Expository notes, reading seminar materials, and slides will be collected on this page. These materials are intended to accompany study and discussion.",
