@@ -72,7 +72,7 @@ def more_link(url: str, label: str) -> str:
     return f'<a class="text-link" href="{safe_url(url)}">{esc(label)}<span class="arrow" aria-hidden="true">→</span></a>'
 
 
-def entries(items: list) -> str:
+def entries(items: list, *, compact: bool = False) -> str:
     output = []
     for item in items:
         if not isinstance(item, dict) or not text(item, 'title'):
@@ -80,8 +80,12 @@ def entries(items: list) -> str:
         title = text(item, 'title')
         primary = text(item, 'url')
         heading = f'<a href="{safe_url(primary)}">{esc(title)}</a>' if primary else esc(title)
-        meta_parts = [text(item, k) for k in ('year', 'authors', 'venue', 'role') if text(item, k)]
+        meta_fields = ('authors',) if compact else ('year', 'authors', 'venue', 'role')
+        meta_parts = [text(item, k) for k in meta_fields if text(item, k)]
         metadata = f'<p class="entry-meta">{esc(" · ".join(meta_parts))}</p>' if meta_parts else ''
+        if compact:
+            output.append(f'<li class="entry"><h3>{heading}</h3>{metadata}</li>')
+            continue
         description = text(item, 'description')
         detail = f'<p class="entry-description">{esc(description)}</p>' if description else ''
         links = []
@@ -194,7 +198,7 @@ def build() -> None:
 
     research_html = f'<h1>Research</h1><p class="intro">{esc(text(research, "intro"))}</p>'
     papers = sequence(research, 'papers')
-    research_html += section('Papers & preprints', entries(papers) if papers else empty('No papers are listed on this page yet.'), bordered=True)
+    research_html += section('Papers & preprints', entries(papers, compact=True) if papers else empty('No papers are listed on this page yet.'), bordered=True)
 
     notes = data['notes']
     notes_page = f'<h1>Notes & talks</h1><p class="intro">{esc(text(notes, "intro"))}</p>'
