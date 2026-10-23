@@ -157,7 +157,6 @@ def render(filename: str, page_title: str, content: str, data: dict) -> str:
         <p class="eyebrow">Mathematics · {esc(text(profile, 'university'))}</p>
         <p class="site-name"><a href="index.html">{esc(name)}{chinese_html}</a></p>
       </div>
-      <p class="tagline">{esc(text(site, 'tagline'))}</p>
     </div>
     <nav class="site-nav" aria-label="Main navigation">{navigation}</nav>
   </header>
