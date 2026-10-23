@@ -190,8 +190,8 @@ def build() -> None:
         if not isinstance(topic, dict) or not text(topic, 'title'):
             raise ValueError('Each research topic needs a title.')
     topic_list = '<ul class="research-list">' + ''.join(
-        f'<li class="research-item"><h3><a href="research.html#topic-{i}">{esc(text(t, "title"))}</a></h3>'
-        f'<p>{esc(text(t, "summary"))}</p></li>' for i, t in enumerate(topics, 1)) + '</ul>'
+        f'<li class="research-item"><h3>{esc(text(t, "title"))}</h3>'
+        f'<p>{esc(text(t, "summary"))}</p></li>' for t in topics) + '</ul>'
     home_html = '<h1>About me</h1><div class="intro">' + paragraphs(sequence(home, 'about')) + '</div>'
     if topics:
         home_html += section('Research interests', topic_list + more_link('research.html', 'More on my research'))
@@ -199,10 +199,6 @@ def build() -> None:
     home_html += section('Notes & talks', notes_html, bordered=True)
 
     research_html = f'<h1>Research</h1><p class="intro">{esc(text(research, "intro"))}</p>'
-    topic_detail = ''.join(f'<section class="topic" id="topic-{i}"><h3>{esc(text(t, "title"))}</h3>'
-                           f'<p>{esc(text(t, "summary"))}</p></section>' for i, t in enumerate(topics, 1))
-    if topics:
-        research_html += section('Mathematical interests', topic_detail)
     papers = sequence(research, 'papers')
     research_html += section('Papers & preprints', entries(papers) if papers else empty('No papers are listed on this page yet.'), bordered=True)
 
