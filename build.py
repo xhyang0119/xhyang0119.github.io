@@ -189,12 +189,7 @@ def build() -> None:
     for topic in topics:
         if not isinstance(topic, dict) or not text(topic, 'title'):
             raise ValueError('Each research topic needs a title.')
-    topic_list = '<ul class="research-list">' + ''.join(
-        f'<li class="research-item"><h3>{esc(text(t, "title"))}</h3>'
-        f'<p>{esc(text(t, "summary"))}</p></li>' for t in topics) + '</ul>'
     home_html = '<h1>About me</h1><div class="intro">' + paragraphs(sequence(home, 'about')) + '</div>'
-    if topics:
-        home_html += section('Research interests', topic_list + more_link('research.html', 'More on my research'))
     notes_html = f'<p class="quiet-note">{esc(text(home, "notes_intro"))}</p>' + more_link('notes.html', 'Notes & talks')
     home_html += section('Notes & talks', notes_html, bordered=True)
 
