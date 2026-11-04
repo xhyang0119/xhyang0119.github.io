@@ -16,7 +16,7 @@
   },
   "site": {
     "tagline": "p-adic groups & ℓ-independence",
-    "updated": "October 2026",
+    "updated": "November 2026",
     "copyright_year": "2026"
   },
   "home": {
@@ -59,8 +59,14 @@
     ]
   },
   "notes": {
-    "intro": "Expository notes, reading seminar materials, and slides will be collected on this page. These materials are intended to accompany study and discussion.",
-    "items": []
+    "intro": "Expository notes, seminar materials, and talk slides.",
+    "items": [
+      {
+        "title": "Enhanced Langlands parameters of regular principal series",
+        "url": "files/talks/enhanced-langlands-parameters-2026-11-05.pdf",
+        "venue": "November 5, 2026 · 4th National Doctoral Forum on Frontiers of Mathematics"
+      }
+    ]
   },
   "teaching": {
     "intro": "Course information and teaching materials will be collected here.",
